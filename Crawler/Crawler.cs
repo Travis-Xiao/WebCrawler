@@ -10,20 +10,41 @@ namespace Crawler
 {
     class Crawler
     {
+        private PoliteWebCrawler crawler;
+        private List<string> queries;
+        private Loader loader = new Loader();
+
         public Crawler ()
         {
             CrawlConfiguration crawlConfig = new CrawlConfiguration();
             crawlConfig.CrawlTimeoutSeconds = 100;
             crawlConfig.MaxConcurrentThreads = 5;
             crawlConfig.MaxPagesToCrawl = 1000;
-            crawlConfig.UserAgentString = "abot v1.0 http://code.google.com/p/abot";
+            crawlConfig.UserAgentString = "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0)";
 
-            PoliteWebCrawler crawler = new PoliteWebCrawler(crawlConfig);
+            crawler = new PoliteWebCrawler(crawlConfig);
 
             crawler.PageCrawlStartingAsync += crawler_processPageCrawlStarting;
             crawler.PageCrawlCompletedAsync += crawler_ProcessPageCrawlCompleted;
 
-            CrawlResult result = crawler.Crawl(new Uri("http://code.google.com/p/abot"));
+            queries = new List<string>();
+        }
+
+        public void PrepareQueries(List<string> keywords)
+        {
+            string qBase = string.Join("+", keywords);
+            // combine with various TLDs
+
+        }
+
+        public void start()
+        {
+            if (crawler == null)
+            {
+                return;
+            }
+            string uri = "http://www.google.com";
+            CrawlResult result = crawler.Crawl(new Uri(uri));
             if (result.ErrorOccurred)
                 Console.WriteLine("Error: {0}", result.ErrorException.Message);
             else
