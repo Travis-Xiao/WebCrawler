@@ -11,6 +11,13 @@ namespace Crawler
     class Crawler
     {
         private PoliteWebCrawler crawler;
+        //private string SearchEngineBase = "http://www.google.com";
+        private string SearchEngineBase = "http://www.baidu.com/s?wd=";
+        private string[] GoogleAlternatives =
+        {
+            "https://duckduckgo.com",
+
+        };
         private List<string> queries;
         private Loader loader = new Loader();
 
@@ -34,7 +41,10 @@ namespace Crawler
         {
             string qBase = string.Join("+", keywords);
             // combine with various TLDs
+            // TODO
 
+
+            // 
         }
 
         public void start()
@@ -43,8 +53,7 @@ namespace Crawler
             {
                 return;
             }
-            string uri = "http://www.google.com";
-            CrawlResult result = crawler.Crawl(new Uri(uri));
+            CrawlResult result = crawler.Crawl(new Uri());
             if (result.ErrorOccurred)
                 Console.WriteLine("Error: {0}", result.ErrorException.Message);
             else

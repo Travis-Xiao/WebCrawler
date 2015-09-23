@@ -17,3 +17,6 @@ E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Crawler\bin\Debug\log4net.xml
 E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Crawler\obj\Debug\Crawler.csprojResolveAssemblyReference.cache
 E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Crawler\obj\Debug\Crawler.exe
 E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Crawler\obj\Debug\Crawler.pdb
+K:\Users\jiannan\Codes\WebCrawler\Crawler\bin\Debug\Crawler.exe.config
+K:\Users\jiannan\Codes\WebCrawler\Crawler\obj\Debug\Crawler.exe
+K:\Users\jiannan\Codes\WebCrawler\Crawler\obj\Debug\Crawler.pdb
