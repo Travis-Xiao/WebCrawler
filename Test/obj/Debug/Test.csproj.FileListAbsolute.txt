@@ -1,0 +1,14 @@
+E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Test\bin\Debug\Test.exe.config
+E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Test\bin\Debug\Test.exe
+E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Test\bin\Debug\Test.pdb
+E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Test\obj\Debug\Test.exe
+E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Test\obj\Debug\Test.pdb
+E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Test\bin\Debug\Crawler.exe
+E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Test\bin\Debug\Newtonsoft.Json.dll
+E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Test\bin\Debug\HtmlAgilityPack.dll
+E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Test\bin\Debug\Crawler.pdb
+E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Test\bin\Debug\Newtonsoft.Json.xml
+E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Test\bin\Debug\HtmlAgilityPack.pdb
+E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Test\bin\Debug\HtmlAgilityPack.xml
+E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Test\bin\Debug\AutoMapper.Net4.dll

@@ -2,13 +2,11 @@ E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Crawler\bin\Release\Crawler.exe.co
 E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Crawler\bin\Release\AutoMapper.Net4.dll
 E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Crawler\bin\Release\Crawler.exe
 E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Crawler\bin\Release\Crawler.pdb
-E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Crawler\bin\Release\Abot.dll
 E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Crawler\bin\Release\AutoMapper.dll
 E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Crawler\bin\Release\CsQuery.dll
 E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Crawler\bin\Release\HtmlAgilityPack.dll
 E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Crawler\bin\Release\log4net.dll
 E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Crawler\bin\Release\Robots.dll
-E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Crawler\bin\Release\Abot.xml
 E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Crawler\bin\Release\AutoMapper.pdb
 E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Crawler\bin\Release\AutoMapper.xml
 E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Crawler\bin\Release\AutoMapper.Net4.pdb
@@ -17,3 +15,5 @@ E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Crawler\bin\Release\log4net.xml
 E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Crawler\obj\Release\Crawler.csprojResolveAssemblyReference.cache
 E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Crawler\obj\Release\Crawler.exe
 E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Crawler\obj\Release\Crawler.pdb
+E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Crawler\bin\Release\HtmlAgilityPack.pdb
+E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Crawler\bin\Release\HtmlAgilityPack.xml

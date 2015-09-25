@@ -2,13 +2,11 @@ E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Crawler\bin\Debug\Crawler.exe.conf
 E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Crawler\bin\Debug\AutoMapper.Net4.dll
 E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Crawler\bin\Debug\Crawler.exe
 E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Crawler\bin\Debug\Crawler.pdb
-E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Crawler\bin\Debug\Abot.dll
 E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Crawler\bin\Debug\AutoMapper.dll
 E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Crawler\bin\Debug\CsQuery.dll
 E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Crawler\bin\Debug\HtmlAgilityPack.dll
 E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Crawler\bin\Debug\log4net.dll
 E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Crawler\bin\Debug\Robots.dll
-E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Crawler\bin\Debug\Abot.xml
 E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Crawler\bin\Debug\AutoMapper.pdb
 E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Crawler\bin\Debug\AutoMapper.xml
 E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Crawler\bin\Debug\AutoMapper.Net4.pdb
@@ -20,3 +18,7 @@ E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Crawler\obj\Debug\Crawler.pdb
 K:\Users\jiannan\Codes\WebCrawler\Crawler\bin\Debug\Crawler.exe.config
 K:\Users\jiannan\Codes\WebCrawler\Crawler\obj\Debug\Crawler.exe
 K:\Users\jiannan\Codes\WebCrawler\Crawler\obj\Debug\Crawler.pdb
+E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Crawler\bin\Debug\HtmlAgilityPack.pdb
+E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Crawler\bin\Debug\HtmlAgilityPack.xml
+E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Crawler\bin\Debug\Newtonsoft.Json.dll
+E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Crawler\bin\Debug\Newtonsoft.Json.xml

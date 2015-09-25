@@ -3,80 +3,87 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Abot.Crawler;
-using Abot.Poco;
+using Crawler.Model;
+using HtmlAgilityPack;
 
 namespace Crawler
 {
     class Crawler
     {
-        private PoliteWebCrawler crawler;
-        //private string SearchEngineBase = "http://www.google.com";
-        private string SearchEngineBase = "http://www.baidu.com/s?wd=";
         private string[] GoogleAlternatives =
         {
             "https://duckduckgo.com",
 
         };
         private List<string> queries;
+        private List<DateTime> timePoints;
+        private DateTime EarliestTime = DateTime.Now.AddYears(-5);
         private Loader loader = new Loader();
+        private Policy searchEnginePolicy;
 
-        public Crawler ()
+        public Crawler(Policy p)
         {
-            CrawlConfiguration crawlConfig = new CrawlConfiguration();
-            crawlConfig.CrawlTimeoutSeconds = 100;
-            crawlConfig.MaxConcurrentThreads = 5;
-            crawlConfig.MaxPagesToCrawl = 1000;
-            crawlConfig.UserAgentString = "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0)";
-
-            crawler = new PoliteWebCrawler(crawlConfig);
-
-            crawler.PageCrawlStartingAsync += crawler_processPageCrawlStarting;
-            crawler.PageCrawlCompletedAsync += crawler_ProcessPageCrawlCompleted;
-
+            searchEnginePolicy = p;
             queries = new List<string>();
+            timePoints = new List<DateTime>();
+        }
+
+        public void PrepareQueries(string [] keywords)
+        {
+            PrepareQueries(new List<string>(keywords));
         }
 
         public void PrepareQueries(List<string> keywords)
         {
             string qBase = string.Join("+", keywords);
             // combine with various TLDs
-            // TODO
+            queries.Add(qBase);
+            qBase += (" site: *");
+            foreach (var tld in loader.GetTLD())
+            {
+                queries.Add(qBase + tld);
+            }
 
-
-            // 
+            // combine with various time points with 1d interval
+            DateTime queryEnd = DateTime.Now;
+            TimeSpan span = new TimeSpan(24, 0, 0);
+            while (EarliestTime < queryEnd)
+            {
+                timePoints.Add(queryEnd - span);
+                queryEnd = queryEnd.AddDays(-1);
+            }
         }
 
         public void start()
         {
-            if (crawler == null)
+            
+            HashSet<string> links = new HashSet<string>();
+            var fetcher = new HtmlWeb();
+            foreach (DateTime d in timePoints)
             {
-                return;
+                foreach (string q in queries)
+                {
+                    for (int i = 0; i < searchEnginePolicy.MaxPageCount; i ++)
+                    {
+                        string searchURL = searchEnginePolicy.SearchEngine
+                            + searchEnginePolicy.QueryName + "=" + q
+                            + "&" + searchEnginePolicy.StartFrom(i)
+                            + "&" + searchEnginePolicy.ConvertDatetimeRange(d)
+                            + "&" + searchEnginePolicy.MiscQueryParas;
+
+                        var doc = fetcher.Load(searchURL);
+                        var resultSet = doc.DocumentNode.SelectNodes(searchEnginePolicy.RecordSelector);
+                        if (resultSet == null) continue;
+                        foreach (var node in resultSet)
+                        {
+                            string link = node.GetAttributeValue("href", "");
+                            links.Add(link);
+                            Console.WriteLine(link);
+                        }
+                    }
+                }
             }
-            CrawlResult result = crawler.Crawl(new Uri());
-            if (result.ErrorOccurred)
-                Console.WriteLine("Error: {0}", result.ErrorException.Message);
-            else
-                Console.WriteLine("S: {0}", result.RootUri.AbsoluteUri);
-        }
-
-        void crawler_processPageCrawlStarting(object sender, PageCrawlStartingArgs e)
-        {
-            PageToCrawl pageToCrawl = e.PageToCrawl;
-            Console.WriteLine("About to crawl link {0} which wwas found on page {1}", pageToCrawl.Uri.AbsoluteUri,
-                pageToCrawl.ParentUri.AbsoluteUri);
-        }
-
-        void crawler_ProcessPageCrawlCompleted(object sender, PageCrawlCompletedArgs e)
-        {
-            CrawledPage crawledPage = e.CrawledPage;
-            if (crawledPage.WebException != null || crawledPage.HttpWebResponse.StatusCode != System.Net.HttpStatusCode.OK)
-                Console.WriteLine("Crawl of page failed {0}", crawledPage.Uri.AbsoluteUri);
-            else
-                Console.WriteLine("Crawl of page succeeded {0}", crawledPage.Uri.AbsoluteUri);
-
-            if (string.IsNullOrEmpty(crawledPage.Content.Text))
-                Console.WriteLine("Page had no content {0}", crawledPage.Uri.AbsoluteUri);
+            Console.WriteLine(links.Count());
         }
     }
 }

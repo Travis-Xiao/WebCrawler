@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Crawler.Model;
 
 namespace Crawler
 {
@@ -10,7 +11,16 @@ namespace Crawler
     {
         static void Main(string[] args)
         {
-            Crawler c = new Crawler();
-        }        
+            string[] keywords = new string[]
+            {
+                "hello",
+                "csharp"
+            };
+
+            Policy p = new BaiduPolicy();
+            Crawler c = new Crawler(p);
+            c.PrepareQueries(keywords);
+            c.start();
+        }
     }
 }
