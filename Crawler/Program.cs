@@ -17,9 +17,9 @@ namespace Crawler
                 "csharp"
             };
 
-            Policy p = new BaiduPolicy();
+            Policy p = new GooglePolicy();
             Crawler c = new Crawler(p);
-            c.PrepareQueries(keywords);
+            c.PrepareQueries(args);
             c.start();
         }
     }
