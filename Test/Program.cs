@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net;
 using System.IO;
+using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using JObject = Newtonsoft.Json.Linq.JObject;
 using JToken = Newtonsoft.Json.Linq.JToken;
@@ -20,7 +21,16 @@ namespace Test
             //string url = "https://code.google.com/p/abot/wiki/v1d5HomePage";
             //Console.WriteLine(Uri.EscapeUriString(url));
             //Console.WriteLine(Uri.EscapeDataString(url));
-            JsonParseTest();
+            //JsonParseTest();
+            RegexTest();
+        }
+
+        static void RegexTest()
+        {
+            Regex r = new Regex(@"cache\.baidu\.com");
+            string url = "http://cache.baidu.com/c?m=9f65cb4a8c8507ed4fece763105392230e54f73b6cd0d3027fa3cf1fd5790801013db2e5703f1102d8ce767001d8131ab5e4732f77552ff5d08ed21781ac92596eca796f36&amp;p=8b2a970e90934eaf5bebf839534194&amp;newp=c067f916d9c159ee07bd9b7e0e1089231610db2151d4d5156795cc&amp;user=baidu";
+            Match m = r.Match(url);
+            Console.WriteLine(m.Success);
         }
 
         static void JsonParseTest()

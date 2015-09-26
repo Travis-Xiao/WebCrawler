@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Crawler.Model
@@ -27,6 +28,28 @@ namespace Crawler.Model
                 ;
             } }
         string  Policy.RecordSelector { get { return "//td[@class='f']//a"; } }
+
+        int Policy.MaxRecordPerQuery
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        bool    Policy.IsValidURL(string url)
+        {
+            Regex [] skipPatterns = new Regex[]
+            {
+                new Regex(@"cache\.baidu\.com")
+            };
+            foreach (var regex in skipPatterns)
+            {
+                if (regex.Match(url).Success) return false;
+            }
+            return true;
+        }
+
         string  Policy.ConvertDatetimeRange(DateTime date)
         {
             DateTime endDate = date.AddDays(1);

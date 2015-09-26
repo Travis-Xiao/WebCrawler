@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Crawler.Model
@@ -35,8 +36,13 @@ namespace Crawler.Model
         {
             return "start=" + Math.Max(0, page) * RecordPerPage;
         }
-        string  RecordSelector { get { return ""; } }
         int     Policy.GetPageRecord() { return RecordPerPage; }
+
+        bool    Policy.IsValidURL(string url)
+        {
+            throw new NotImplementedException();
+        }
+
         string  Policy.RecordSelector { get { throw new NotImplementedException(); } }
     }
 }

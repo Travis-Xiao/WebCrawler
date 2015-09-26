@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 namespace Crawler.Model
 {
@@ -17,5 +18,6 @@ namespace Crawler.Model
         int     MaxRecordPerQuery   { get; }
         int     MaxPageCount        { get; }
         string  RecordSelector      { get; }
+        bool    IsValidURL(string url);
     }
 }

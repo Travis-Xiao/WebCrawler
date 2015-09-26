@@ -1,0 +1,5 @@
+http://www.baidu.com/s?wd=hello+csharp site: *.creditcard&pn=0&gpc: stf=1443188034,1443274433|stftype=2&ie=utf-8&f=8&tn=baidulocal&rn=50&rsv_spt=1&inputT=418&cl=3
+http://www.baidu.com/s?wd=hello+csharp site: *.cruises&pn=0&gpc: stf=1443188034,1443274433|stftype=2&ie=utf-8&f=8&tn=baidulocal&rn=50&rsv_spt=1&inputT=506&cl=3
+http://www.baidu.com/s?wd=hello+csharp site: *.erni&pn=0&gpc: stf=1443188034,1443274433|stftype=2&ie=utf-8&f=8&tn=baidulocal&rn=50&rsv_spt=1&inputT=464&cl=3
+http://www.baidu.com/s?wd=hello+csharp site: *.expert&pn=0&gpc: stf=1443188034,1443274433|stftype=2&ie=utf-8&f=8&tn=baidulocal&rn=50&rsv_spt=1&inputT=507&cl=3
+http://www.baidu.com/s?wd=hello+csharp site: *.sky&pn=0&gpc: stf=1443188034,1443274433|stftype=2&ie=utf-8&f=8&tn=baidulocal&rn=50&rsv_spt=1&inputT=560&cl=3

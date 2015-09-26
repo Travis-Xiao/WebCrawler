@@ -12,3 +12,17 @@ E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Test\bin\Debug\Newtonsoft.Json.xml
 E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Test\bin\Debug\HtmlAgilityPack.pdb
 E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Test\bin\Debug\HtmlAgilityPack.xml
 E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Test\bin\Debug\AutoMapper.Net4.dll
+K:\Users\jiannan\Codes\WebCrawler_new\Test\bin\Debug\Test.exe.config
+K:\Users\jiannan\Codes\WebCrawler_new\Test\obj\Debug\Test.exe
+K:\Users\jiannan\Codes\WebCrawler_new\Test\obj\Debug\Test.pdb
+K:\Users\jiannan\Codes\WebCrawler_new\Test\bin\Debug\AutoMapper.Net4.dll
+K:\Users\jiannan\Codes\WebCrawler_new\Test\bin\Debug\Test.exe
+K:\Users\jiannan\Codes\WebCrawler_new\Test\bin\Debug\Test.pdb
+K:\Users\jiannan\Codes\WebCrawler_new\Test\bin\Debug\Crawler.exe
+K:\Users\jiannan\Codes\WebCrawler_new\Test\bin\Debug\Newtonsoft.Json.dll
+K:\Users\jiannan\Codes\WebCrawler_new\Test\bin\Debug\HtmlAgilityPack.dll
+K:\Users\jiannan\Codes\WebCrawler_new\Test\bin\Debug\Crawler.pdb
+K:\Users\jiannan\Codes\WebCrawler_new\Test\bin\Debug\Newtonsoft.Json.xml
+K:\Users\jiannan\Codes\WebCrawler_new\Test\bin\Debug\HtmlAgilityPack.pdb
+K:\Users\jiannan\Codes\WebCrawler_new\Test\bin\Debug\HtmlAgilityPack.xml
+K:\Users\jiannan\Codes\WebCrawler_new\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache

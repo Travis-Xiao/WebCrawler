@@ -9,8 +9,8 @@ namespace Crawler
 {
     class Loader
     {
-        private static string rootDir = Directory.GetCurrentDirectory() + "../../../";
-        private string TLDFile = rootDir + "Resource/TLD.csv";
+        private static string rootDir = Directory.GetCurrentDirectory() + "/../../../";
+        private string TLDFile = rootDir + "Crawler/Resource/TLD.csv";
         private List<string> tlds = new List<string>();
         public Loader()
         {
