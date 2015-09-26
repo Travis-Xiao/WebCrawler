@@ -1,6 +1,0 @@
-E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Test\bin\Release\Test.exe.config
-E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Test\bin\Release\Test.exe
-E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Test\bin\Release\Test.pdb
-E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Test\obj\Release\Test.csprojResolveAssemblyReference.cache
-E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Test\obj\Release\Test.exe
-E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Test\obj\Release\Test.pdb
