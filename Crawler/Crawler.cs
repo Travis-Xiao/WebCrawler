@@ -36,7 +36,7 @@ namespace Crawler
 
         public void PrepareQueries(List<string> keywords)
         {
-            string qBase = string.Join("+", keywords);
+            string qBase = string.Join("+", keywords).Replace(" ", "");
             // combine with various TLDs
             queries.Add(qBase);
             qBase += (" site: *");
@@ -81,7 +81,7 @@ namespace Crawler
                             + "&" + searchEnginePolicy.StartFrom(i)
                             + "&" + searchEnginePolicy.ConvertDatetimeRange(d)
                             + "&" + searchEnginePolicy.MiscQueryParas;
-
+                        Console.WriteLine(searchURL);
                         System.Threading.Thread.Sleep(100 + rand.Next() % 1000);
                         try
                         {
