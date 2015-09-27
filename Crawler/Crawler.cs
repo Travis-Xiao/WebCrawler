@@ -21,6 +21,7 @@ namespace Crawler
         private DateTime EarliestTime = DateTime.Now.AddYears(-5);
         private Loader loader = new Loader();
         private Policy searchEnginePolicy;
+        private List<string> Keywords = new List<string>();
 
         public Crawler(Policy p)
         {
@@ -36,6 +37,7 @@ namespace Crawler
 
         public void PrepareQueries(List<string> keywords)
         {
+            Keywords = keywords;
             string qBase = string.Join("+", keywords).Replace(" ", "");
             // combine with various TLDs
             queries.Add(qBase);
@@ -55,7 +57,18 @@ namespace Crawler
             }
         }
 
-        public void start()
+        private void SaveLinks(HashSet<string> links)
+        {
+            StringBuilder builder = new StringBuilder();
+            foreach (var k in Keywords)
+                builder.Append(k.Replace("[^a-zA-z0-9]", "")).Append("+");
+            StreamWriter writer = new StreamWriter("links" + builder.ToString() + ".csv");
+            foreach (var l in links)
+                writer.WriteLine(l);
+            writer.Close();
+        }
+
+        public void Start()
         {
             DateTime startTime = DateTime.Now;
             HashSet<string> links = new HashSet<string>();
@@ -121,6 +134,8 @@ namespace Crawler
 
                 stat.Add(q, c);
             }
+
+            SaveLinks(links);
 
             StreamWriter logWriter = new StreamWriter(ProjectRoot + "Failed.txt");
             foreach (var line in failedURLs)

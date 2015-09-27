@@ -88,6 +88,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Crawler.cs" />
+    <Compile Include="FiveFilters.cs" />
     <Compile Include="Loader.cs" />
     <Compile Include="Model\BaiduPolicy.cs" />
     <Compile Include="Model\GooglePolicy.cs" />
