@@ -74,6 +74,7 @@ namespace Crawler
             HashSet<string> links = new HashSet<string>();
             var fetcher = new HtmlWeb();
             Random rand = new Random();
+            List<string> userAgents = loader.GetUserAgents();
             List<string> failedURLs = new List<string>();
             Dictionary<string, Dictionary<DateTime, int>> stat = new Dictionary<string, Dictionary<DateTime, int>>();
 
@@ -95,9 +96,10 @@ namespace Crawler
                             + "&" + searchEnginePolicy.ConvertDatetimeRange(d)
                             + "&" + searchEnginePolicy.MiscQueryParas;
                         Console.WriteLine(searchURL);
-                        System.Threading.Thread.Sleep(100 + rand.Next() % 1000);
+                        System.Threading.Thread.Sleep(3000 + rand.Next() % 1000);
                         try
                         {
+                            fetcher.UserAgent = userAgents[rand.Next() % userAgents.Count()];
                             var doc = fetcher.Load(searchURL);
                             var resultSet = doc.DocumentNode.SelectNodes(searchEnginePolicy.RecordSelector);
 
