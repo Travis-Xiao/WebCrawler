@@ -9,11 +9,10 @@ namespace Crawler.Model
 {
     class GooglePolicy : Policy
     {
-        string  SearchEngineBase = "http://www.google.com/search?";
+        string  SearchEngineBase = "https://www.google.com.hk/search?";
         int     RecordPerPage = 100;
-        int     Policy.MaxRecordPerQuery { get { return 1000; } }
-        string  Policy.SearchEngine { get { return SearchEngineBase; } }
         public  int MaxRecordPerQuery { get { return 1000; } }
+        string  Policy.SearchEngine { get { return SearchEngineBase; } }
         string  Policy.QueryName { get { return "q"; } }
         int     Policy.MaxPageCount { get { return (int) Math.Ceiling(MaxRecordPerQuery * 1.0 / RecordPerPage); } }
 
@@ -29,7 +28,7 @@ namespace Crawler.Model
         string  Policy.ConvertDatetimeRange(DateTime date)
         {
             DateTime endTime = date.AddDays(1);
-            return "tbs=cdr:1,cd_min:" + date.ToShortDateString() + ",cd_max:" + endTime.ToShortDateString();
+            return "tbs=cdr:1,cd_min:" + date.ToString("dd/MM/yyyy") + ",cd_max:" + endTime.ToString("dd/MM/yyyy");
         }
 
         string  Policy.StartFrom(int page)
@@ -40,9 +39,9 @@ namespace Crawler.Model
 
         bool    Policy.IsValidURL(string url)
         {
-            throw new NotImplementedException();
+            return true;
         }
 
-        string  Policy.RecordSelector { get { throw new NotImplementedException(); } }
+        string  Policy.RecordSelector { get { return "//li[@class='g']//h3[@class='r']//a"; } }
     }
 }

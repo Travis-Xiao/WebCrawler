@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Net;
+using System.Web;
 using Newtonsoft.Json;
 using JObject = Newtonsoft.Json.Linq.JObject;
 using JToken = Newtonsoft.Json.Linq.JToken;
@@ -31,7 +32,6 @@ namespace Crawler
             WebRequest req = WebRequest.Create(url);
             Stream obj = req.GetResponse().GetResponseStream();
             StreamReader reader = new StreamReader(obj);
-
             return reader.ReadToEnd() + "";
         }
 
@@ -45,6 +45,12 @@ namespace Crawler
             var desc = (string) item.SelectToken("description");
             res.Add("description", desc);
             return res;
+        }
+
+        public static string GetParameterFromURL(string url, string paraName)
+        {
+            Uri myUri = new Uri(url);
+            return HttpUtility.ParseQueryString(myUri.Query).Get(paraName);
         }
     }
 }

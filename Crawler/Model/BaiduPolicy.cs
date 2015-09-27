@@ -29,14 +29,6 @@ namespace Crawler.Model
             } }
         string  Policy.RecordSelector { get { return "//td[@class='f']//a"; } }
 
-        int Policy.MaxRecordPerQuery
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
-
         bool    Policy.IsValidURL(string url)
         {
             Regex [] skipPatterns = new Regex[]

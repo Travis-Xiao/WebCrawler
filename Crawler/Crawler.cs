@@ -107,7 +107,7 @@ namespace Crawler
                             Console.WriteLine("{7}:\t{0}/{1}\t{2}/{3}\t{4}/{5}\t{6}",
                                 k, queries.Count(), j, timePoints.Count(), i, searchEnginePolicy.MaxPageCount, links.Count() - t, q);
                         }
-                        catch (Exception) {
+                        catch (Exception e) {
                             failedURLs.Add(searchURL);
                         }
                     }
