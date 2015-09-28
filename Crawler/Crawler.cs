@@ -119,6 +119,7 @@ namespace Crawler
                             else
                             {
                                 // Skip the query directly
+                                Console.WriteLine("No valid entry found.");
                                 i = searchEnginePolicy.MaxPageCount;
                             }
                             Console.WriteLine("{7}/{8}:\t{0}/{1}\t{2}/{3}\t{4}/{5}\t{6}",
