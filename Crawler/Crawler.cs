@@ -62,7 +62,7 @@ namespace Crawler
             StringBuilder builder = new StringBuilder();
             foreach (var k in Keywords)
                 builder.Append(k.Replace("[^a-zA-z0-9]", "")).Append("+");
-            StreamWriter writer = new StreamWriter("links" + builder.ToString() + ".csv");
+            StreamWriter writer = new StreamWriter("links-" + builder.ToString() + ".csv");
             foreach (var l in links)
                 writer.WriteLine(l);
             writer.Close();
