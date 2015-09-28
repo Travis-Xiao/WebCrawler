@@ -42,7 +42,7 @@ namespace Crawler.Model
             return true;
         }
 
-        string  Policy.RecordSelector { get { return "//[@class='g']//h3[@class='r']//a"; } }
+        string  Policy.RecordSelector { get { return "//h3[@class='r']//a"; } }
 
         string  Policy.ParseRawURL(string url)
         {
