@@ -103,7 +103,7 @@ namespace Crawler
                             fetcher.UserAgent = userAgents[rand.Next() % userAgents.Count()];
                             var doc = fetcher.Load(searchURL);
                             var resultSet = doc.DocumentNode.SelectNodes(searchEnginePolicy.RecordSelector);
-                            Console.WriteLine("Doc length: " + doc.ToString().Count());
+                            Console.WriteLine("Doc length: " + doc.DocumentNode.InnerHtml.Count());
                             int t = links.Count();
                             if (resultSet != null)
                             {

@@ -59,3 +59,5 @@ E:\Codes\GroupVis\WebCrawler\Crawler\bin\Release\HtmlAgilityPack.xml
 E:\Codes\GroupVis\WebCrawler\Crawler\bin\Release\log4net.xml
 E:\Codes\GroupVis\WebCrawler\Crawler\bin\Release\Newtonsoft.Json.xml
 E:\Codes\GroupVis\WebCrawler\Crawler\obj\Release\Crawler.csprojResolveAssemblyReference.cache
+E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Crawler\bin\Release\Newtonsoft.Json.dll
+E:\Codes\GroupVis\GoogleCrawler\GoogleCrawler\Crawler\bin\Release\Newtonsoft.Json.xml
