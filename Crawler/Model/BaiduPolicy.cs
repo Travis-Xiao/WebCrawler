@@ -29,6 +29,14 @@ namespace Crawler.Model
             } }
         string  Policy.RecordSelector { get { return "//td[@class='f']//a"; } }
 
+        int Policy.MaxRecordPerQuery
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+        }
+
         bool    Policy.IsValidURL(string url)
         {
             Regex [] skipPatterns = new Regex[]
@@ -52,6 +60,11 @@ namespace Crawler.Model
         string  Policy.StartFrom(int page)
         {
             return "pn=" + Math.Max(0, page) * RecordPerPage;
+        }
+
+        string Policy.ParseRawURL(string url)
+        {
+            return url;
         }
     }
 }

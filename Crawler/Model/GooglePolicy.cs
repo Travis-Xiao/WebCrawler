@@ -43,5 +43,10 @@ namespace Crawler.Model
         }
 
         string  Policy.RecordSelector { get { return "//li[@class='g']//h3[@class='r']//a"; } }
+
+        string  Policy.ParseRawURL(string url)
+        {
+            return Util.GetParameterFromURL(url, "q");
+        }
     }
 }

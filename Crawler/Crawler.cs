@@ -77,6 +77,7 @@ namespace Crawler
             List<string> userAgents = loader.GetUserAgents();
             List<string> failedURLs = new List<string>();
             Dictionary<string, Dictionary<DateTime, int>> stat = new Dictionary<string, Dictionary<DateTime, int>>();
+            StreamWriter errorLog = new StreamWriter("error.log");
 
             for (int k = 0; k < queries.Count(); k ++)
             {
@@ -109,6 +110,7 @@ namespace Crawler
                                 foreach (var node in resultSet)
                                 {
                                     string link = node.GetAttributeValue("href", "");
+                                    link = searchEnginePolicy.ParseRawURL(link);
                                     if (!searchEnginePolicy.IsValidURL(link)) continue;
                                     links.Add(link);
                                     Console.WriteLine(links.Count() + "\t" + link);
@@ -123,6 +125,8 @@ namespace Crawler
                                 k, queries.Count(), j, timePoints.Count(), i, searchEnginePolicy.MaxPageCount, links.Count() - t, q);
                         }
                         catch (Exception e) {
+                            Console.WriteLine(e.Message);
+                            errorLog.WriteLine(e.Message + "\t" + searchURL);
                             failedURLs.Add(searchURL);
                         }
                     }
@@ -136,7 +140,7 @@ namespace Crawler
 
                 stat.Add(q, c);
             }
-
+            errorLog.Close();
             SaveLinks(links);
 
             StreamWriter logWriter = new StreamWriter(ProjectRoot + "Failed.txt");

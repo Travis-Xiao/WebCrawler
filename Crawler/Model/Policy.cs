@@ -19,5 +19,6 @@ namespace Crawler.Model
         int     MaxPageCount        { get; }
         string  RecordSelector      { get; }
         bool    IsValidURL(string url);
+        string  ParseRawURL(string url);
     }
 }
