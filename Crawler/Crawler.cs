@@ -121,8 +121,8 @@ namespace Crawler
                                 // Skip the query directly
                                 i = searchEnginePolicy.MaxPageCount;
                             }
-                            Console.WriteLine("{7}:\t{0}/{1}\t{2}/{3}\t{4}/{5}\t{6}",
-                                k, queries.Count(), j, timePoints.Count(), i, searchEnginePolicy.MaxPageCount, links.Count() - t, q);
+                            Console.WriteLine("{7}/{8}:\t{0}/{1}\t{2}/{3}\t{4}/{5}\t{6}",
+                                k, queries.Count(), j, timePoints.Count(), i, searchEnginePolicy.MaxPageCount, links.Count() - t, q, links.Count());
                         }
                         catch (Exception e) {
                             Console.WriteLine(e.Message);
