@@ -49,7 +49,9 @@ namespace Crawler
 
         public static string GetParameterFromURL(string url, string paraName)
         {
-            Uri myUri = new Uri(url);
+            string u = url;
+            if (!url.StartsWith("http")) u = "http://www.example.com" + u;
+            Uri myUri = new Uri(u);
             return HttpUtility.ParseQueryString(myUri.Query).Get(paraName);
         }
     }

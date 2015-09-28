@@ -19,7 +19,7 @@ namespace Crawler
 
             Policy p = new GooglePolicy();
             Crawler c = new Crawler(p);
-            c.PrepareQueries(args);
+            c.PrepareQueries(keywords);
             c.Start();
         }
     }
